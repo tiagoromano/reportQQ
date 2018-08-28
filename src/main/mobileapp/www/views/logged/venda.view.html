@@ -1,0 +1,56 @@
+<ion-view cache-view="false" view-title="" hide-back-button="true">
+  <ion-nav-buttons side="right"> 
+    <button class="button button-stable" ng-click="blockly.js.AbrirPedidos.abrir()"> <i class="icon ion-plus-round"></i> </button>
+    
+  </ion-nav-buttons>
+  <ion-nav-buttons side="left">
+      <button class="button button-icon button-clear btn-menu" ng-hide="Venda.inserting || Venda.editing" menu-toggle="left"> <i class="fas fa-bars"></i></button>
+  </ion-nav-buttons>
+  <ion-content>
+      
+    <div class="row">
+        <div class="title-pages">
+            <span><img src="img/pharma-manager-prototype-vendas-color.png" data-component="crn-image" id="carrinho-imagem"></span><h3>Vendas</h3>
+        </div>              
+    </div>
+      <div class="container">
+          <div class="col-xs-12">
+    <div ng-hide="Venda.inserting || Venda.editing" data-component="crn-datasource-filter" id="crn-datasource-filter-general" class="">
+      <label class="item item-input" id="cloud-search1">
+       
+        <input type="text" ng-model="vars.search" cronapp-filter="data;" cronapp-filter-operator="" cronapp-filter-autopost="true" crn-datasource="Venda" value="" placeholder="{{'template.crud.search' | translate}}">
+      </label>
+    </div>   
+    <div class="component-holder ng-binding ng-scope ui-draggable ui-draggable-handle" data-component="crn-datasource" id="crn-datasource-906854">
+      <datasource name="Venda" entity="api/cronapi/crud/app.entity.Venda" keys="id" rows-per-page="10" delete-message="Deseja remover?" class=""></datasource>
+    </div>
+    <div crn-datasource="Venda" class="" ng-hide="Venda.editing || Venda.inserting">
+      <ion-list can-swipe="listCanSwipe">
+        <ion-item ng-repeat="rowData in datasource.data" class="item">
+          <div class="row">
+            
+            
+            
+            <div class="col">
+              {{rowData.produto.nome}}
+            </div>
+            <div class="col">
+              {{rowData.data | date:'dd/MM/yyyy'}}
+            </div>
+          </div>
+          <ion-option-button class="button-positive" ng-click="datasource.startEditing(rowData)">
+            <i class="icon ion-edit"></i>
+          </ion-option-button>
+          <ion-option-button class="button-assertive" ng-click="datasource.remove(rowData)">
+            &nbsp;
+            <i class="icon ion-trash-a"></i>
+          </ion-option-button>
+        </ion-item>
+      </ion-list>
+    </div>              
+          </div>
+      </div>
+
+    
+  </ion-content>
+</ion-view>

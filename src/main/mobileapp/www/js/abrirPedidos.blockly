@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><blockly formTarget="src/main/mobileapp/www/views/logged/pedido.view.html" resourceType="JS" ruleDescription="operacoesVariavelEscopo" ruleName="operacoesVariavelEscopo" ruleSynchronous="false" ruleTimeout="300" ruleType="I">
+  <metadata scale="1" scrollx="405.8752637431579" scrolly="106.99999999999963" target="EwjV_$/VGnME3Q?TnX3s"/>
+  <block colour="#995ba5" id="EwjV_$/VGnME3Q?TnX3s" origintype="procedures_defnoreturn" output="false" tooltip="Cria uma função que não tem retorno." type="procedures_defnoreturn" x="-197" y="63">
+    <field name="NAME">abrir</field>
+    <comment h="80" pinned="false" w="160">Descreva esta função...</comment>
+    <statement name="STACK">
+      <block colour="#934848" dependencyby="EwjV_$/VGnME3Q?TnX3s" id="k)51S^`O7!dI5^j*Atyt" multilayer="true" namespace="cronapi.screen.openUrl" origintype="procedures_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EAbrir%20url%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20abrir%20url%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Url%20de%20destino%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Nova%20aba?%20:%20L%C3%B3gico%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Largura%20:%20Inteiro%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Altura%20:%20Inteiro%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.openUrl%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.openUrl%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callnoreturn">
+        <mutation name="{{cronapi.screen.openUrl}}" return-raw-type="undefined">
+          <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Url de destino"/>
+          <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.BOOLEAN" name="Nova aba?"/>
+          <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.LONG" name="Largura"/>
+          <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.LONG" name="Altura"/>
+        </mutation>
+        <value name="ARG0">
+          <shadow colour="#5ba593" dependencyby="EwjV_$/VGnME3Q?TnX3s" id=")s.8m/x@YAp$x1/TiPx*" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+            <field name="TEXT">#/app/logged/pedido</field>
+          </shadow>
+        </value>
+        <value name="ARG1">
+          <block colour="#5b80a5" dependencyby="EwjV_$/VGnME3Q?TnX3s" id="-xigOrp*rX8Hbx^fuYe7" origintype="logic_boolean" output="true" tooltip="Retorna verdadeiro ou falso." type="logic_boolean">
+            <field name="BOOL">FALSE</field>
+          </block>
+        </value>
+        <value name="ARG2">
+          <shadow colour="#5b67a5" dependencyby="EwjV_$/VGnME3Q?TnX3s" id="+lFE.72P7/iG4PK[(A0|" origintype="math_number" output="true" tooltip="function () { [native code] }" type="math_number">
+            <field name="NUM">0</field>
+          </shadow>
+        </value>
+        <value name="ARG3">
+          <shadow colour="#5b67a5" dependencyby="EwjV_$/VGnME3Q?TnX3s" id="DGTQ;Zx!Ef91_br:z%`w" origintype="math_number" output="true" tooltip="function () { [native code] }" type="math_number">
+            <field name="NUM">0</field>
+          </shadow>
+        </value>
+      </block>
+    </statement>
+  </block>
+</blockly>

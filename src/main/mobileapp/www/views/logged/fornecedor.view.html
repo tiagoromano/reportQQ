@@ -1,0 +1,73 @@
+<ion-view cache-view="false" view-title="" hide-back-button="true"> 
+  <ion-nav-buttons side="right"> 
+    <button class="button button-stable" ng-hide="Fornecedor.inserting || Fornecedor.editing" ng-click="Fornecedor.startInserting()"> <i class="icon ion-plus-round"></i> </button> 
+    <button class="button button-stable" ng-show="Fornecedor.inserting || Fornecedor.editing" ng-click="Fornecedor.post()"> <i class="icon ion-checkmark"></i> </button> 
+  </ion-nav-buttons> 
+  <ion-nav-buttons side="left"> 
+    <button class="button button-icon button-clear btn-menu" ng-hide="Fornecedor.inserting || Fornecedor.editing" menu-toggle="left"><i class="fas fa-bars"></i> </button> 
+    <button class="button button-stable" ng-show="Fornecedor.inserting || Fornecedor.editing" ng-click="Fornecedor.cancel()"> <i class="icon ion-android-arrow-back"></i> </button> 
+  </ion-nav-buttons> 
+  <ion-content> 
+    <div class="container"> 
+      <div class="col-xs-12"> 
+      
+        <div class="row">
+            <div class="title-pages">
+                <span><img src="img/pharma-manager-prototype-fornecedor-color.png" data-component="crn-image" id="carrinho-imagem"></span><h3>Fornecedor</h3>
+            </div>              
+        </div>
+      
+        <div ng-hide="Fornecedor.inserting || Fornecedor.editing" data-component="crn-datasource-filter" id="crn-datasource-filter-general" class=""> 
+          <label class="item item-input" id="cloud-search1">  <input type="text" ng-model="vars.search" cronapp-filter="nome_fornecedor;" cronapp-filter-operator="" cronapp-filter-autopost="true" crn-datasource="Fornecedor" value="" placeholder="{{'template.crud.search' | translate}}"> </label> 
+        </div> 
+        <div class="component-holder ng-binding ng-scope ui-draggable ui-draggable-handle" data-component="crn-datasource" id="crn-datasource-906854"> 
+          <datasource name="Fornecedor" entity="api/cronapi/crud/app.entity.Fornecedor" keys="id" rows-per-page="10" delete-message="Deseja remover?" class=""></datasource> 
+        </div> 
+        <div crn-datasource="Fornecedor" class="" ng-hide="Fornecedor.editing || Fornecedor.inserting"> 
+          <ion-list can-swipe="listCanSwipe"> 
+            <ion-item ng-repeat="rowData in datasource.data" class="item row-fornecedor-dados" ng-click="datasource.startEditing(rowData)"> 
+              <div class="row ">
+                  <p><span>Nome:</span> {{rowData.nome_fornecedor}}</p> 
+              </div>
+
+              <div class="row ">
+                  <p><span>CNPJ:</span> {{rowData.cnpj}}</p>
+              </div> 
+              
+              <div class="row ">
+                  <p><span>Telefone:</span> {{rowData.telefone}}</p>
+              </div> 
+              
+              <div class="row ">
+                  <p><span>Email:</span> {{rowData.email}}</p> 
+              </div> 
+              <ion-option-button class="button-positive" ng-click="datasource.startEditing(rowData)"> 
+                <i class="icon ion-edit"></i> 
+              </ion-option-button> 
+              <ion-option-button class="button-assertive" ng-click="datasource.remove(rowData)">
+                 &nbsp; 
+                <i class="icon ion-trash-a"></i> 
+              </ion-option-button> 
+            </ion-item> 
+          </ion-list> 
+        </div> 
+        <div ng-show="Fornecedor.editing || Fornecedor.inserting"> 
+          <form crn-datasource="Fornecedor"> 
+            <fieldset ng-disabled="!Fornecedor.editing &amp;&amp; !Fornecedor.inserting"> 
+              <div class="list"> 
+                <!-- nome_fornecedor begin --> 
+                <label for="textinput-nome_fornecedor" class="item item-input item-stacked-label"> <input type="text" placeholder="Nome" ng-model="Fornecedor.active.nome_fornecedor" id="textinput-nome_fornecedor" name="textinput-nome_fornecedor"> </label> 
+                <!-- cnpj begin --> 
+                <label for="textinput-cnpj" class="item item-input item-stacked-label"> <input type="text" placeholder="Cnpj" ng-model="Fornecedor.active.cnpj" id="textinput-cnpj" name="textinput-cnpj" mask="99.999.999/9999-99;0"> </label> 
+                <!-- telefone begin --> 
+                <label for="textinput-telefone" class="item item-input item-stacked-label"> <input type="text" placeholder="Telefone" ng-model="Fornecedor.active.telefone" id="textinput-telefone" name="textinput-telefone"> </label> 
+                <!-- email begin --> 
+                <label for="textinput-email" class="item item-input item-stacked-label"> <input type="text" placeholder="Email" ng-model="Fornecedor.active.email" id="textinput-email" name="textinput-email"> </label> 
+              </div> 
+            </fieldset> 
+          </form> 
+        </div> 
+      </div> 
+    </div> 
+  </ion-content> 
+</ion-view>

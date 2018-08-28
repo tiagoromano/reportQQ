@@ -1,0 +1,58 @@
+<ion-side-menus enable-menu-with-back-views="false"> 
+  <div class="row" data-container="true"> 
+    <ion-side-menu-content> 
+      <ion-nav-bar class="bar-stable"> 
+        <ion-nav-back-button> 
+        </ion-nav-back-button> 
+        <ion-nav-buttons side="left"> 
+          <button class="button button-icon button-clear btn-menu" menu-toggle="left"><i class="fas fa-bars"></i> </button> 
+        </ion-nav-buttons> 
+      </ion-nav-bar> 
+      <ion-nav-view name="menuContent"> 
+      </ion-nav-view> 
+      <ion-header-bar> 
+        <div class="header"> 
+          <img src="img/pharma-manager-logo.png"> 
+        </div> 
+      </ion-header-bar> 
+    </ion-side-menu-content> 
+    <ion-side-menu side="left"> 
+      <ion-content data-container="true"> 
+        <ion-list> 
+          <!-- Menu --> 
+          <div class="component-holder" data-component="crn-navbar" id="crn-navbar-986427"> 
+            <div class="nav navbar-nav"> 
+                <div class="menu-pharma">
+                  <div menu-close="" class="item-icon-left item item-complex" data-component="crn-anchor"> 
+                    <a class="component-holder item-content ng-binding" href="#/app/home"> <i class="icon-pharma"><img src="img/pharma-manager-prototype-dashboard.png"><p>Dashboard</p></i></a> 
+                  </div> 
+                  <div menu-close="" class="item-icon-left item item-complex" data-component="crn-anchor"> 
+                    <a class="item-content ng-binding" href="#/app/logged/user"> <i class="icon-pharma"><img src="img/pharma-manager-prototype-usuario.png"><p>Usuários</p></i></a> 
+                  </div> 
+                  <div menu-close="" class="item-icon-left item item-complex" data-component="crn-anchor"> 
+                    <a class="item-content ng-binding" href="#/app/logged/cliente"> <i class="icon-pharma"><img src="img/pharma-manager-prototype-cliente.png"><p>Cliente</p></i></a> 
+                  </div> 
+                  <div menu-close="" class="item-icon-left item item-complex" data-component="crn-anchor"> 
+                    <a class="item-content ng-binding" href="#/app/logged/fornecedor"> <i class="icon-pharma"><img src="img/pharma-manager-prototype-fornecedor.png"><p>Fornecedor</p></i></a> 
+                  </div>
+                  <div menu-close="" class="item-icon-left item item-complex" data-component="crn-anchor"> 
+                    <a class="item-content ng-binding" href="#/app/logged/pedido"> <i class="icon-pharma"><img src="img/pharma-manager-prototype-pedido.png"><p>Pedido de Venda</p></i></a> 
+                  </div>
+                  <div menu-close="" class="item-icon-left item item-complex" data-component="crn-anchor"> 
+                    <a class="item-content ng-binding" href="#/app/logged/produto"> <i class="icon-pharma"><img src="img/pharma-manager-prototype-produto.png"><p>Produto</p></i></a> 
+                  </div>
+                  <div menu-close="" class="item-icon-left item item-complex" data-component="crn-anchor"> 
+                    <a class="item-content ng-binding" href="#/app/logged/chat"> <i class="icon-pharma"><img src="img/pharma-manager-prototype-usuario.png"><p>Assistente Pessoal</p></i></a> 
+                  </div>                      
+                  <div menu-close="" class="item-icon-left item item-complex" data-component="crn-anchor"> 
+                    <a class="component-holder item-content ng-binding" ng-click="logout()" href="#"> <i class="icon-pharma"><img src="img/pharma-manager-prototype-sair.png"><p>Sair</p></i></a> 
+                  </div> 
+              </div>
+            </div> 
+          </div> 
+          <!-- Menu --> 
+        </ion-list> 
+      </ion-content> 
+    </ion-side-menu> 
+  </div> 
+</ion-side-menus>

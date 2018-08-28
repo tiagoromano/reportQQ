@@ -1,0 +1,400 @@
+/*
+========================
+
+Estilos Pharma Manager by CronApp
+
+=========================
+
+*/
+
+@font-face {
+    font-family: Roboto;
+    src: url(fontes/Roboto-Medium_0.ttf);
+}
+
+.bar {
+  background-image: none;
+  background-size: 100% 0px;
+}
+
+
+.logo {
+  width: 300px;
+  margin: 0 auto 30px auto;
+  position: relative;
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+  margin: 0 auto; 
+}
+
+.login-view-content {
+  background-color: #d5ffbf;
+  margin: 0 auto;
+  padding-top: 40%;
+  padding-bottom: 50%;
+}
+
+
+input, textarea, input[type="text"], input[type="password"], input[type="month"], input[type="number"], input[type="email"], input[type="tel"] {
+  background-color: transparent;
+  border-bottom: 1px solid #6fb0e1;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  color: #989898;
+  font-size: 12px;
+  margin-bottom: 50px;
+  padding: 0;
+  width: 100%; 
+  font-family: 'Roboto';
+}
+
+.produto {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+button.add-produto {
+  background-color: #3eb2e4;
+  border-radius: 1000px;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  float: right;
+}
+
+button.add-produto i {
+  color: #fff;
+}
+
+.dados-produto {
+  float: left;
+  min-height: 50px;
+}
+
+.dados-produto h4 {
+  margin: 13px 0px 0px 0px;
+  padding: 0;
+  color: #ccc;
+}
+
+.dados-produto p {
+  margin: 13px 0px;
+  padding: 0;
+  font-size: 10px;
+  color: #ccc;
+}
+
+button.btn-principal {
+  background-color: #6fb0e1;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  font-family: 'Roboto';
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+button.btn-principal:hover {
+  background-color: #2075b5;
+}
+
+h1 {
+  color: #6fb0e1;
+  font-size: 20px;
+  font-family: 'Roboto';
+  width: 100px;
+}
+
+.titulo-home-chart {
+  width: 100%;
+  margin: 30px auto 50px auto;
+  text-align: center;
+}
+
+.titulo-home-chart img{
+  width: 150px;
+}
+
+.titulo-home-chart h1 {
+  width: 100px;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  padding: 0px 10px;
+  margin: 0 auto;
+  width: 100%;
+  height: 44px;
+  position: relative;
+  text-align: center;
+}
+
+.header img {
+  width: 110px;
+  margin: 0 auto;
+
+}
+
+button.btn-menu i {
+  color: #42b3e4;
+  padding: 6px 10px;
+  font-size: 25px;
+}
+
+button i {
+  color: #42b3e4;
+  background: transparent;
+}
+
+.button.button-stable {
+    border-color: transparent;
+    background-color: transparent;
+    color: #444;
+}
+
+.button.button-stable:focus, .button.button-stable:active {
+  background: transparent;
+}
+
+.bar-stable .button.button-clear {
+  border-color: transparent;
+  background: none;
+  box-shadow: none;
+  color: #42b3e4;
+}
+
+.header-menu-collapsed {
+  background-color:#000;
+}
+
+.menu {
+  background-color: #42b3e4;
+  opacity: 1;
+}
+
+.item {
+  border-color:transparent;
+  background-color: transparent;
+  color: #000;
+  position: relative;
+  z-index: 2;
+  display: block;
+  margin: -1px;
+  padding: 10px 0px;
+  border-width: 0px;
+  border-style: solid;
+  font-size: 16px;
+}
+
+.item-complex .item-content {
+  position: relative;
+  z-index: 2;
+  padding: 0px 20px;
+  border: none;
+  background-color: transparent;
+  color: #000;
+}
+
+.icon-pharma img {
+  margin-right: 10px;
+  width: 30px;
+  line-height: 0;
+  float: left;
+}
+
+.icon-pharma p {
+  color: #fff;
+  font-size: 13px;
+  margin: 0;
+  padding: 4px;
+  font-family: "Roboto";
+}
+
+.profile-menu img {
+  float: left;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+}
+
+.profile-menu {
+  float: left;
+  color: #fff;
+  width: 100%;
+  padding-top: 30px;
+  padding-left: 30px;
+  margin: 10% 0 0 0px;
+  border-top: 1px solid #7fd0f3;
+}
+
+.profile-menu h2{
+  color: #fff;
+  float: left;
+  font-size: 17px;
+  margin: 9px 0px 9px 9px;
+}
+
+.profile-menu span {
+  display: block;
+  color: #fff;
+  font-size:10px;
+  font-weight: 100;
+}
+
+.menu-pharma {
+  padding: 90px 0px 70px 0px;
+  width: 100%;
+}
+
+.title-pages {
+  width: 100%;
+  padding: 15px;
+  margin-top:10px;
+  text-align: center;
+  display: inline-flex;
+}
+
+.title-pages h3 {
+    color: #3eb2e4;
+    font-family: Roboto;
+    margin: 3px auto 10px 5px;
+    display: inline-flex;
+    padding: 0;
+    float: left;
+}
+
+.title-pages span {
+  margin-top: 20px;
+  text-align: center;
+  margin: 0 0 0 auto;
+}
+
+.title-pages img {
+  width: 40px;
+  height: auto;
+  display: inline;
+  float: left;
+  text-align: center;
+  opacity: 0.7;
+}
+
+fieldset {
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+    border: none;
+}
+
+.row-fornecedor-dados {
+  margin: 10px auto;
+  border-bottom:1px solid #ccc;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

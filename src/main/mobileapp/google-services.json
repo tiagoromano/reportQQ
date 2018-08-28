@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1004646545073",
+    "firebase_url": "https://chatfarmaciacronapp.firebaseio.com",
+    "project_id": "chatfarmaciacronapp",
+    "storage_bucket": "chatfarmaciacronapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1004646545073:android:adb5b9005424682b",
+        "android_client_info": {
+          "package_name": "com.app.farmaciacronapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1004646545073-ju94ra7746eemi1sgia9vf73nh1a0bsr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvaBKIPPxkZiUVCbXHTJ1aJUUg6JiSzoQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

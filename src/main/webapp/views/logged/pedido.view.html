@@ -1,0 +1,63 @@
+<div class="component-holder ng-binding ng-scope" data-component="crn-textinput" id="crn-textinput-1003738"><div class="form-group"><label for="exampleInputEmail1">Label</label><input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.input5903" class="form-control" id="input5903" placeholder="Placeholder text"></div></div><h3>Pedidos</h3>
+
+<div id="starter" ng-init="" ng-destroy=""><h3></h3>
+
+<!-- div row para pesquisa -->
+<!--<div class="row">-->
+
+    
+
+<div data-component="crn-button" id="crn-button-564202" class="">
+    <button class="botao-add" type="submit" onclick="" data-component="crn-button" ng-click="blockly.js.blockly.AbrirVenda.novaVenda()"><i class="fas fa-plus"></i> <span class="">Novo Pedido</span></button><button class="btn component-holder btn-info pull-right" type="submit" ng-click="cronapi.util.makeCallServerBlocklyAsync('blockly.pedidos.GerarRelatorio:gerar', null, null)" xattr-size="" xattr-fullsize="" xattr-theme="btn-info" data-component="crn-button" id="crn-button-923251"><i class="fas fa-file-alt"></i> <span>Imprimir relatório</span></button>
+</div><div data-component="crn-button" id="crn-button-564202" class="">
+    
+</div>
+<!-- fim div row para pesquisa -->
+<!--</div>-->
+
+<datasource filter="" name="Venda" entity="api/cronapi/query/rhdbvvb2o6k6/" keys="id" rows-per-page="100" delete-message="Deseja remover?" class=""></datasource>
+<div class="component-holder" data-component="crn-grid" id="crn-grid-Venda">
+    <div crn-datasource="Venda" class="" ng-hide="Venda.editing || Venda.inserting">
+        <table class="table  table-bordered table-hover table-striped">
+            <thead>
+            <tr class="table-header">
+                
+                <th class="active">
+                    <div class="table-header-title">Data do Pedido</div>
+                </th>
+                <th class="">
+                    <div class="table-header-title">Valor</div>
+                </th>
+                <th class="">
+                    <div class="table-header-title">{{"template.crud.actions" | translate}}</div>
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="table-content" ng-repeat="rowData in datasource.data">
+                
+                <td class="active">
+                    <div class="table-header-dado">{{rowData[0] | mask:'date'}}</div>
+                </td>
+                <td class="">
+                    <div class="table-header-dado">R$ {{rowData[1] | mask:'money'}}</div>
+                </td>
+                <td class="">
+                    <div class="table-header-dado">
+                        <button class="botao-acao" data-component="crn-button" type="submit" ng-click="blockly.js.blockly.AbrirVenda.abrir(rowData[2])"><i class="glyphicon glyphicon-th-list"></i></button><button class="botao-acao" data-component="crn-button" type="submit" ng-click="cronapi.util.makeCallServerBlocklyAsync('blockly.pedidos.GerarBoleto:gerar', null, null, rowData[2])"><i class="fas fa-barcode"></i></button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="table-footer-controls">
+            <button class="btn btn-default btn-block btn-clicked" data-component="crn-button" ng-show="datasource.hasNextPage()" ng-click="datasource.nextPage()">{{"template.crud.load_more" | translate}}...</button>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- OneToOne modal -->
+<!-- OneToOne modal end-->
+</div>

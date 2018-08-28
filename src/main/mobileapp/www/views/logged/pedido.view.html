@@ -1,0 +1,49 @@
+<div id="starter" ng-init="blockly.js.CriarCarrinho.criar()" ng-destroy=""> 
+  <ion-view cache-view="false" view-title="" hide-back-button="true"> 
+    <ion-content data-replace="false"> 
+    
+    
+    <div class="row">
+        <div class="title-pages">
+            <span><img src="img/pharma-manager-prototype-pedido-color.png" data-component="crn-image" id="carrinho-imagem"></span><h3>Pedido</h3>
+        </div>              
+    </div>    
+    
+    
+      <div class="component-holder ng-binding ng-scope" data-component="crn-datasource" id="crn-datasource-306237"> 
+        <datasource name="Produto" entity="api/cronapi/query/1ib8qn0k2em2a/" keys="id" rows-per-page="100" on-before-create="" on-after-create="" on-before-update="" on-after-update="" on-before-delete="" on-after-delete="" on-after-fill=""></datasource> 
+      </div> 
+      <div class="component-holder ng-binding ng-scope" data-component="crn-list" id="crn-list-126006"> 
+        <div crn-datasource="Produto"> 
+          <div class="list" ng-repeat="rowData in datasource.data" data-replace="false" data-container="true"> 
+              <div class="container">
+                    <div class="col-xs-4">
+                        <a class="item item-thumbnail-left component-holder" data-component="crn-list-item-thumbnail" id="crn-list-item-thumbnail-344590">
+                            <img src="data:image/png;base64,{{rowData[3]}}" class="component-holder" xattr-position="" data-component="crn-image" id="crn-image-1002213">
+                        </a>
+                    </div>
+                    
+                    <div class="col-xs-4">
+                        <div class="item-thumbnail-right dados-produto">
+                            <h4>{{rowData[0]}}</h4>
+                            <h4 class="ng-hide">{{rowData[2]}}</h4>
+                            <p>R$ {{rowData[1]}}</p>                    
+                        </div>                
+                    </div>
+                    
+                    <div class="col-xs-4">
+                        <button class="component-holder add-produto" type="submit" ng-click="blockly.js.CriarCarrinho.inserir(rowData[0], rowData[1], rowData[2])" data-component="crn-button" id="crn-button-294267" xattr-fullsize="button-full" xattr-type="" xattr-size="button-small" xattr-theme="button-positive">
+                            <i class="fas fa-plus"></i>
+                        </button>                
+                    </div>                  
+              </div>
+
+        
+          </div>
+          <button class="button component-holder button-full button-balanced button-large" type="submit" ng-click="cronapi.util.makeCallServerBlocklyAsync('blockly.pedidos.ObterCarrinhoMobile:inserir', null, null)" data-component="crn-button" id="crn-button-396893" xattr-size="button-large" xattr-fullsize="button-full" xattr-theme="button-balanced"><i class=""></i> <span>Finalizar</span></button>
+        </div> 
+      </div> 
+      
+    </ion-content> 
+  </ion-view> 
+</div>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?><Context>
+    <Resource accessToUnderlyingConnectionAllowed="true" driverClassName="com.mysql.jdbc.Driver" logAbandoned="true" name="jdbc/main" password="0or506p9897p9614" profile="DEV" removeAbandoned="" removeAbandonedTimeout="60" schema="" type="javax.sql.DataSource" url="jdbc:mysql://rds-oncronos-shared.cx8gelec2ybx.us-east-1.rds.amazonaws.com:3306/8755ad27-5469-4830-be50-6c9897c96140?createDatabaseIfNotExist=true" username="8755nq2754694830"/>
+    <Profile value="DEV"/>
+</Context>

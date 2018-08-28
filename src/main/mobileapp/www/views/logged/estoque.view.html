@@ -1,0 +1,167 @@
+<ion-view cache-view="false" view-title="Estoque" hide-back-button="true">
+  <ion-nav-buttons side="right"> 
+    <button class="button button-stable" ng-hide="Estoque.inserting || Estoque.editing" ng-click="Estoque.startInserting()"> <i class="icon ion-plus-round"></i> </button>
+    <button class="button button-stable" ng-show="Estoque.inserting || Estoque.editing" ng-click="Estoque.post()"> <i class="icon ion-checkmark"></i> </button>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="left">
+    <button class="button button-icon button-clear ion-navicon" ng-hide="Estoque.inserting || Estoque.editing" menu-toggle="left"> </button>
+    <button class="button button-stable" ng-show="Estoque.inserting || Estoque.editing" ng-click="Estoque.cancel()"> <i class="icon ion-android-arrow-back"></i> </button>
+  </ion-nav-buttons>
+  <ion-content>
+    <div ng-hide="Estoque.inserting || Estoque.editing" data-component="crn-datasource-filter" id="crn-datasource-filter-general" class="">
+      <label class="item item-input" id="cloud-search1">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="text"  ng-model="vars.search" cronapp-filter="tipo;" cronapp-filter-operator="" cronapp-filter-autopost="true" crn-datasource="Estoque" value="" placeholder="{{'template.crud.search' | translate}}">
+      </label>
+    </div>   
+    <div class="component-holder ng-binding ng-scope ui-draggable ui-draggable-handle" data-component="crn-datasource" id="crn-datasource-906854">
+      <datasource  name="Estoque" entity="api/cronapi/crud/app.entity.Estoque" keys="id" rows-per-page="10" delete-message="Deseja remover?" class=""></datasource>
+    </div>
+    <div crn-datasource="Estoque" class="" ng-hide="Estoque.editing || Estoque.inserting">
+      <ion-list can-swipe="listCanSwipe">
+        <ion-item ng-repeat="rowData in datasource.data" class="item" ng-click="datasource.startEditing(rowData)">
+          <div class="row">
+            <div class="col">
+              {{rowData.id}}
+            </div>
+            <div class="col">
+              {{rowData.tipo}}
+            </div>
+            <div class="col">
+              {{rowData.quantidade}}
+            </div>
+            <div class="col">
+              {{rowData.data}}
+            </div>
+            <div class="col">
+              {{rowData.movimentacao}}
+            </div>
+            <div class="col">
+              {{rowData.observacoes}}
+            </div>
+            <div class="col">
+              {{rowData.lote}}
+            </div>
+            <div class="col">
+              {{rowData.validade}}
+            </div>
+            <div class="col">
+              {{rowData.produto.nome}}
+            </div>
+            <div class="col">
+              {{rowData.cliente.nome_cliente}}
+            </div>
+          </div>
+          <ion-option-button class="button-positive" ng-click="datasource.startEditing(rowData)">
+            <i class="icon ion-edit"></i>
+          </ion-option-button>
+          <ion-option-button class="button-assertive" ng-click="datasource.remove(rowData)">
+            &nbsp;
+            <i class="icon ion-trash-a"></i>
+          </ion-option-button>
+        </ion-item>
+      </ion-list>
+    </div>
+    <div ng-show="Estoque.editing || Estoque.inserting">
+      <form crn-datasource="Estoque">
+        <fieldset ng-disabled="!Estoque.editing &amp;&amp; !Estoque.inserting">
+          <div class="list">
+            <!-- tipo begin -->
+            <label for="textinput-tipo" class="item item-input item-stacked-label">
+            <span class="input-label">Tipo</span>
+            <input
+            type="text"
+            placeholder="Tipo"
+            ng-model="Estoque.active.tipo"
+            id="textinput-tipo"
+            name="textinput-tipo"
+            >
+            </label>
+            <!-- quantidade begin -->
+            <label for="textinput-quantidade" class="item item-input item-stacked-label">
+            <span class="input-label">Quantidade</span>
+            <input
+            type="text"
+            placeholder="Quantidade"
+            ng-model="Estoque.active.quantidade"
+            id="textinput-quantidade"
+            name="textinput-quantidade"
+            >
+            </label>
+            <!-- data begin -->
+            <label for="textinput-data" class="item item-input item-stacked-label">
+            <span class="input-label">Data</span>
+            <input
+            type="text"
+            placeholder="Data"
+            ng-model="Estoque.active.data"
+            id="textinput-data"
+            name="textinput-data"
+            >
+            </label>
+            <!-- movimentacao begin -->
+            <label for="textinput-movimentacao" class="item item-input item-stacked-label">
+            <span class="input-label">Movimentação</span>
+            <input
+            type="text"
+            placeholder="Movimentação"
+            ng-model="Estoque.active.movimentacao"
+            id="textinput-movimentacao"
+            name="textinput-movimentacao"
+            >
+            </label>
+            <!-- observacoes begin -->
+            <label for="textinput-observacoes" class="item item-input item-stacked-label">
+            <span class="input-label">Observações</span>
+            <input
+            type="text"
+            placeholder="Observações"
+            ng-model="Estoque.active.observacoes"
+            id="textinput-observacoes"
+            name="textinput-observacoes"
+            >
+            </label>
+            <!-- lote begin -->
+            <label for="textinput-lote" class="item item-input item-stacked-label">
+            <span class="input-label">Lote</span>
+            <input
+            type="text"
+            placeholder="Lote"
+            ng-model="Estoque.active.lote"
+            id="textinput-lote"
+            name="textinput-lote"
+            >
+            </label>
+            <!-- validade begin -->
+            <label for="textinput-validade" class="item item-input item-stacked-label">
+            <span class="input-label">Validade</span>
+            <input
+            type="text"
+            placeholder="Validade"
+            ng-model="Estoque.active.validade"
+            id="textinput-validade"
+            name="textinput-validade"
+            >
+            </label>
+            <!-- produto begin -->
+            <datasource name="Produto" entity="api/cronapi/crud/app.entity.Produto" keys="id" class=""></datasource>
+            <label for="textinput-produto" class="item item-input item-select">
+              <span class="input-label">produto</span>
+              <select ng-model="Estoque.active.produto" class="form-control" id="textinput-produto" name="textinput-produto" ng-options="opt as opt.nome for opt in Produto.data track by opt.id" >
+              <option value=''>None</option>
+              </select>
+            </label>
+            <!-- cliente begin -->
+            <datasource name="Cliente" entity="api/cronapi/crud/app.entity.Cliente" keys="id" class=""></datasource>
+            <label for="textinput-cliente" class="item item-input item-select">
+              <span class="input-label">cliente</span>
+              <select ng-model="Estoque.active.cliente" class="form-control" id="textinput-cliente" name="textinput-cliente" ng-options="opt as opt.nome_cliente for opt in Cliente.data track by opt.id" >
+              <option value=''>None</option>
+              </select>
+            </label>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </ion-content>
+</ion-view>

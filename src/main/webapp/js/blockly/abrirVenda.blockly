@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><blockly formTarget="" resourceType="JS" ruleDescription="abrirVenda" ruleName="abrirVenda" ruleSynchronous="false" ruleTimeout="" ruleType="I">
+  <metadata scale="1" scrollx="365.9999999999993" scrolly="178.00000000000045" target="o:OHFN@c^PRMdb=qW;+`"/>
+  <block colour="#995ba5" id="o:OHFN@c^PRMdb=qW;+`" origintype="procedures_defnoreturn" output="false" tooltip="Cria uma função que não tem retorno." type="procedures_defnoreturn" x="-277" y="-52">
+    <field name="NAME">novaVenda</field>
+    <comment h="80" pinned="false" w="160">Descreva esta função...</comment>
+    <statement name="STACK">
+      <block colour="#934848" dependencyby="o:OHFN@c^PRMdb=qW;+`" id="whV)?WfJs^:57pp9SbzE" multilayer="true" namespace="cronapi.screen.openUrl" origintype="procedures_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EAbrir%20url%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20abrir%20url%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Url%20de%20destino%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Nova%20aba?%20:%20L%C3%B3gico%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Largura%20:%20Inteiro%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Altura%20:%20Inteiro%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.openUrl%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.openUrl%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callnoreturn">
+        <mutation name="{{cronapi.screen.openUrl}}" return-raw-type="undefined">
+          <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Url de destino"/>
+          <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.BOOLEAN" name="Nova aba?"/>
+          <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.LONG" name="Largura"/>
+          <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.LONG" name="Altura"/>
+        </mutation>
+        <value name="ARG0">
+          <shadow colour="#5ba593" dependencyby="o:OHFN@c^PRMdb=qW;+`" id="]Nu/EnVcIT{milw`1q,t" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+            <field name="TEXT">/#/home/logged/novaVenda</field>
+          </shadow>
+        </value>
+        <value name="ARG1">
+          <block colour="#5b80a5" dependencyby="o:OHFN@c^PRMdb=qW;+`" id=",Av3Hf?NBFG.owny;{vw" origintype="logic_boolean" output="true" tooltip="Retorna verdadeiro ou falso." type="logic_boolean">
+            <field name="BOOL">FALSE</field>
+          </block>
+        </value>
+        <value name="ARG2">
+          <shadow colour="#5b67a5" dependencyby="o:OHFN@c^PRMdb=qW;+`" id="#LZj#8)f3%_J?w.3wXOJ" origintype="math_number" output="true" tooltip="function () { [native code] }" type="math_number">
+            <field name="NUM">800</field>
+          </shadow>
+        </value>
+        <value name="ARG3">
+          <shadow colour="#5b67a5" dependencyby="o:OHFN@c^PRMdb=qW;+`" id="I0po{=hZ@No?k(/|jo)E" origintype="math_number" output="true" tooltip="function () { [native code] }" type="math_number">
+            <field name="NUM">600</field>
+          </shadow>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block colour="#995ba5" id="Anb:u5+^,0vLkL9QIqn5" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-187" y="-22">
+    <mutation>
+      <arg name="pedidoId"/>
+    </mutation>
+    <field name="NAME">abrir</field>
+    <comment h="80" pinned="false" w="160">abrirVenda</comment>
+    <statement name="STACK">
+      <block colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="WPN8~ytn#4Ps{TB58R+X" multilayer="true" namespace="cronapi.screen.changeView" origintype="procedures_open_form_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EMudar%20formul%C3%A1rio%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20mudar%20o%20formul%C3%A1rio%20corrente%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Formul%C3%A1rio%20de%20destino%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Par%C3%A2metros%20:%20Lista%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.changeView%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.changeView%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_open_form_callnoreturn">
+        <mutation data="%7B%22form%22:%22#/home/logged/venda%22,%22params%22:%22%5B%5C%22pedidoId%5C%22%5D%22%7D" name="{{cronapi.screen.changeView}}">
+          <arg name="pedidoId"/>
+        </mutation>
+        <value name="ARG0">
+          <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id=";Q:3?WhhB9y4EXw78`Nw" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+            <field name="VAR">pedidoId</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+</blockly>

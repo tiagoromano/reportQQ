@@ -1,0 +1,84 @@
+<div id="starter" ng-init="blockly.js.blockly.OperacoesVariavelEscopo.criar()" ng-destroy="">
+   &nbsp;
+   
+             <h3>
+             Novo Pedido
+          </h3>
+   
+  <div class="margin-pedido component-holder ng-binding ng-scope col-lg-12 col-md-12 col-sm-12 col-xs-12" data-component="crn-panel" id="crn-panel-720282"> 
+    <div class="panel" xattr-theme="panel-primary" data-container="true"> 
+
+      <div class="row" data-container="true"> 
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" data-component="crn-textinput" id="crn-textinput-207830"> 
+          <div class="form-group"> 
+            <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.input6044" class="form-control input-novo-pedido" id="input6044" placeholder="Quantidade">
+          </div> 
+        </div>
+        <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4" data-component="crn-combobox-dynamic" id="crn-combobox-dynamic-1074589"> 
+          <div class="form-group"> 
+            <ui-select crn-datasource="Produto" ng-model="vars.Produto" ng-disabled="disabled" theme="bootstrap" class="crn-select" ng-required="false"> 
+              <ui-select-match placeholder="Produtos" class="">
+                 {{$select.selected.nome}} 
+              </ui-select-match> 
+              <ui-select-choices repeat="rowData as rowData in datasource.data | filter : $select.search" class="" refresh="" refresh-deplay=""> 
+                <div class="">
+                   {{rowData.nome}} 
+                </div> 
+              </ui-select-choices> 
+            </ui-select>
+          </div>
+        </div>
+        
+        <div class="preco col-md-4 col-lg-4 col-xs-4 col-sm-4" xattr-position="text-right" data-component="crn-subtitle" id="crn-subtitle-501579">
+            <p>PREÇO: R$ {{ (vars.Produto.preco_venda * vars.input6044 &gt; 0) ? vars.Produto.preco_venda * vars.input6044 : '' }}</p>            
+            <button class="btn-add-produto" type="submit" xattr-size="" xattr-fullsize="btn-block" xattr-theme="btn-success" data-component="crn-button" ng-click="blockly.js.blockly.OperacoesVariavelEscopo.inserir(vars.Produto, vars.input6044)"><i class="fas fa-plus"></i></button>
+        </div>
+ 
+        <div class="component-holder ng-binding ng-scope col-xs-12 col-sm-12 col-md-12 col-lg-12" data-component="crn-datasource" id="crn-datasource-835617"> 
+          <datasource name="Produto" entity="api/cronapi/crud/app.entity.Produto" keys="id" rows-per-page="100" on-before-create="" on-after-create="" on-before-update="" on-after-update="" on-before-delete="" on-after-delete="" on-after-fill="" data-component="crn-datasource" filter=""></datasource> 
+        </div> 
+      </div> 
+      
+      
+      <div class="row component-holder" data-component="crn-horizontal-container" id="crn-horizontal-container-770505"> 
+        <div class="component-holder ng-binding ng-scope col-xs-12" data-component="crn-grid" id="crn-grid-102881"></div> 
+        <div class="component-holder ng-binding ng-scope col-xs-12" data-component="crn-grid" id="crn-grid-846141"> 
+          <div crn-datasource=""> 
+            <table class="table table-bordered table-hover"> 
+              <thead> 
+                <tr class="table-header"> 
+                  <th class="active"> 
+                    <div class="table-title-header" data-container="true">Produto</div></th> 
+                  <th class=""> 
+                    <div class="table-title-header" data-container="true">Quantidade</div></th> 
+                <th class=""></th></tr> 
+              </thead> 
+              <tbody> 
+                <tr class="table-content" ng-repeat="item in vars.Lista"> 
+                  <td class="active"> 
+                    <div data-container="true">{{item.produto.nome}}</div></td> 
+                  <td class=""> 
+                    <div data-container="true">
+                       {{item.quantidade}} 
+                    </div></td> 
+                <td class="">
+                    <button class="botao-acao" ng-click="vars.Lista.splice($index, 1)" type="submit" xattr-size="" xattr-fullsize="btn-block" xattr-theme="btn-default" data-component="crn-button" id="crn-button-966710">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    </td>
+                    </tr> 
+              </tbody> 
+            </table> 
+            <div class="table-footer-controls"> 
+              <button class="btn btn-default btn-block btn-clicked" ng-show="datasource.hasNextPage()" ng-click="datasource.nextPage()">Load more...</button> 
+            </div> 
+          </div> 
+        </div> 
+      </div> 
+    <div class="finalizar-pedido">
+        <button class="btn component-holder btn-block btn-finalizar btn-info" type="submit" ng-click="cronapi.util.makeCallServerBlocklyAsync('blockly.pedidos.ObterCarrinho:inserir', null, null)" xattr-size="btn-lg" xattr-fullsize="btn-block" xattr-theme="btn-info" data-component="crn-button" id="crn-button-975266"><i class="glyphicon glyphicon-ok"></i> <span>Finalizar</span></button> 
+    </div>
+    
+    </div> 
+  </div> 
+</div>

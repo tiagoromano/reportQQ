@@ -1,0 +1,74 @@
+<ion-view cache-view="false" view-title="" hide-back-button="true"> 
+  <ion-nav-buttons side="right"> 
+    <button class="button button-stable" ng-hide="Cliente.inserting || Cliente.editing" ng-click="Cliente.startInserting()"> <i class="icon ion-plus-round"></i> </button> 
+    <button class="button button-stable" ng-show="Cliente.inserting || Cliente.editing" ng-click="Cliente.post()"> <i class="icon ion-checkmark"></i> </button> 
+  </ion-nav-buttons> 
+  <ion-nav-buttons side="left"> 
+    <button class="button button-icon button-clear btn-menu" ng-hide="Cliente.inserting || Cliente.editing" menu-toggle="left"><i class="fas fa-bars"></i></button> 
+    <button class="button button-stable" ng-show="Cliente.inserting || Cliente.editing" ng-click="Cliente.cancel()"> <i class="icon ion-android-arrow-back"></i> </button> 
+  </ion-nav-buttons> 
+  <ion-content>
+      
+    <div class="row">
+        <div class="title-pages">
+            <span><img src="img/pharma-manager-prototype-cliente-color.png" data-component="crn-image" id="carrinho-imagem"></span><h3>Cliente</h3>
+        </div>              
+    </div>
+       
+    <div class="container"> 
+      <div class="col-xs-12"> 
+        <div ng-hide="Cliente.inserting || Cliente.editing" data-component="crn-datasource-filter" id="crn-datasource-filter-general" class=""> 
+          <label class="item item-input" id="cloud-search1">  <input type="text" ng-model="vars.search" cronapp-filter="nome_cliente;" cronapp-filter-operator="" cronapp-filter-autopost="true" crn-datasource="Cliente" value="" placeholder="{{'template.crud.search' | translate}}"> </label> 
+        </div> 
+        <div class="component-holder ng-binding ng-scope ui-draggable ui-draggable-handle" data-component="crn-datasource" id="crn-datasource-906854"> 
+          <datasource name="Cliente" entity="api/cronapi/crud/app.entity.Cliente" keys="id" rows-per-page="10" delete-message="Deseja remover?" class=""></datasource> 
+        </div> 
+        <div crn-datasource="Cliente" class="" ng-hide="Cliente.editing || Cliente.inserting"> 
+          <ion-list can-swipe="listCanSwipe"> 
+            <ion-item ng-repeat="rowData in datasource.data" class="item row-fornecedor-dados" ng-click="datasource.startEditing(rowData)"> 
+              <div class="row"> 
+                <p><span>Nome: </span>{{rowData.nome_cliente}}</p>
+              </div>
+              
+              <div class="row ">               
+                <p><span>Telefone: </span>{{rowData.telefone}}</p>
+              </div>
+              
+              <div class="row">
+                <p><span>E-mail: </span>{{rowData.email}}</p>
+              </div>
+              
+              <ion-option-button class="button-positive" ng-click="datasource.startEditing(rowData)"> 
+                <i class="icon ion-edit"></i> 
+              </ion-option-button> 
+              <ion-option-button class="button-assertive" ng-click="datasource.remove(rowData)">
+                 &nbsp; 
+                <i class="icon ion-trash-a"></i> 
+              </ion-option-button> 
+            </ion-item> 
+          </ion-list> 
+        </div> 
+        <div ng-show="Cliente.editing || Cliente.inserting"> 
+          <form crn-datasource="Cliente"> 
+            <fieldset ng-disabled="!Cliente.editing &amp;&amp; !Cliente.inserting"> 
+              <div class="list"> 
+                <!-- nome_cliente begin --> 
+                <label for="textinput-nome_cliente" class="item item-input item-stacked-label">  <input type="text" placeholder="Nome Cliente" ng-model="Cliente.active.nome_cliente" id="textinput-nome_cliente" name="textinput-nome_cliente"> </label> 
+                <!-- cpf begin --> 
+                <label for="textinput-cpf" class="item item-input item-stacked-label">  <input type="text" placeholder="Cpf" ng-model="Cliente.active.cpf" id="textinput-cpf" name="textinput-cpf" mask="999.999.999-99;0"> </label> 
+                <!-- telefone begin --> 
+                <label for="textinput-telefone" class="item item-input item-stacked-label">  <input type="text" placeholder="Telefone" ng-model="Cliente.active.telefone" id="textinput-telefone" name="textinput-telefone"> </label> 
+                <!-- email begin --> 
+                <label for="textinput-email" class="item item-input item-stacked-label">  <input type="text" placeholder="Email" ng-model="Cliente.active.email" id="textinput-email" name="textinput-email"> </label> 
+                <!-- cep begin --> 
+                <label for="textinput-cep" class="item item-input item-stacked-label">  <input type="text" placeholder="Cep" ng-model="Cliente.active.cep" id="textinput-cep" name="textinput-cep"> </label> 
+                <!-- endereco begin --> 
+                <label for="textinput-endereco" class="item item-input item-stacked-label">  <input type="text" placeholder="Endereço" ng-model="Cliente.active.endereco" id="textinput-endereco" name="textinput-endereco"> </label> 
+              </div> 
+            </fieldset> 
+          </form> 
+        </div> 
+      </div> 
+    </div> 
+  </ion-content> 
+</ion-view>
